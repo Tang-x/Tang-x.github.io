@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="馒头的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  <link rel="dns-prefetch" href="https://at.alicdn.com">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>最新一周学习总结</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+  <canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">馒头的博客</a>
+  <a class="face-img" href="/">
+    <img src="https://i.loli.net/2019/12/28/GwnEfrOQ1H9L4yJ.jpg">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    最新一周学习总结
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2020-01-05T13:27:08.956Z" itemprop="datePublished">2020-01-05</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2020-01-05T15:39:22.655Z" itemprop="dateUpdated">2020-01-05</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <p>时间：2020年01月05日</p>
+<p>####本周主要围绕着“投票应用“详细讲解Django这个框架 </p>
+<ul>
+<li>如何创建Django项目<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">方法一：</span><br><span class="line">    1. django-admin startproject django1906</span><br><span class="line">    2. 使用PyCharm打开项目并创建虚拟环境</span><br><span class="line">        ~ File ---&gt; Settings ---&gt; Project ---&gt;</span><br><span class="line">        Project Interpreter ---&gt; Add</span><br><span class="line">        ~ Terminal ---&gt;</span><br><span class="line">        python -m venv venv &#x2F; virtualenv --python&#x3D;&#x2F;usr&#x2F;bin&#x2F;python3 venv</span><br><span class="line">        source venv&#x2F;bin&#x2F;activate &#x2F; &quot;venv&#x2F;Scripts&#x2F;activate&quot;</span><br><span class="line">    3. 安装项目所需依赖项</span><br><span class="line">        pip install django&#x3D;&#x3D;2.1.15</span><br><span class="line">    4. 运行项目</span><br><span class="line">        ~ python manage.py runserver</span><br><span class="line">        ~ Add Configuration --&gt; + --&gt; Python </span><br><span class="line">        --&gt; Script Path (manage.py) </span><br><span class="line">        --&gt; Parameters (runserver)</span><br><span class="line">        </span><br><span class="line">方法二：</span><br><span class="line">	1. 用PyCharm创建一个普通的Python项目</span><br><span class="line">    2. 安装Django所需的依赖项</span><br><span class="line">        ~ pip install django&#x3D;&#x3D;2.1.14</span><br><span class="line">    3. 把Python项目变成Django项目</span><br><span class="line">        ~ django-admin startproject django1906 .</span><br><span class="line">    4. 运行项目</span><br><span class="line">    </span><br><span class="line">方法三：</span><br><span class="line">	1. 克隆项目到本地</span><br><span class="line">    ~ 使用PyCharm的&quot;get from version control&quot;</span><br><span class="line">    ~ git clone git@gitee.com:jackfrued&#x2F;django1906.git</span><br><span class="line">    2. 创建虚拟环境</span><br><span class="line">        ~ Linux&#x2F;macOS: source venv&#x2F;bin&#x2F;activate</span><br><span class="line">        ~ Windows: &quot;venv&#x2F;Scripts&#x2F;activate&quot;</span><br><span class="line">    3. 重建依赖项</span><br><span class="line">    ~ pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<ul>
+<li><p>创建数据库、创建用户然后用Django项目连接数据库</p>
+</li>
+<li><p>项目架构模式：MVC架构模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Model   -   View    -   Controller</span><br><span class="line">模型         视图        控制器</span><br><span class="line">数据        数据的显示</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建应用、去实现投票功能</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1.静态资源和Ajax请求</span><br><span class="line">先定义一个模型，模型定义完后通过“生成迁移”和“执行迁移”来完成关系型数据库中二维表的创建、接下来配置模板页、加载静态页和Ajax请求</span><br><span class="line"></span><br><span class="line">2.表单的应用</span><br><span class="line">表单的应用里面有一个叫跨站请求伪造（通常简称为CSRF），模板指令&#123;% csrf_token %&#125;为表单添加一个隐藏域这也是Django在提交表单时的硬性要求，除非我们设置了免除CSRF令牌。</span><br><span class="line"></span><br><span class="line">3.Cookie和Session</span><br><span class="line"> cookie - 浏览器中的一个临时文件可以保存键值对</span><br><span class="line"> cookie中的数据在发起HTTP请求时会自动加载请求头中</span><br><span class="line"> window.localStorage &#x2F; window.sessionStorage</span><br><span class="line"> cookie和session的关系</span><br><span class="line"> request.session ---&gt; 服务器内存中的一个对象，可以保存用户数据</span><br><span class="line"> cookie ---&gt; 用户浏览器临时文件 ---&gt; cookie中保存了session的ID</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+</li>
+</ul>
+
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a href="https://hexo.io" target="_blank" rel="noopener"> Hexo </a> 强力驱动 |
+      <a href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2017-2020 馒头的博客 京ICP备xxxxxx号</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.js"></script>
+
+  <script src="//at.alicdn.com/t/font_159214_mvtxvg9me9.js"></script>
+<script type="text/javascript" src="/js/src/click_love.js"></script>
+<script type="text/javascript" src="/js/src/click_magic.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
