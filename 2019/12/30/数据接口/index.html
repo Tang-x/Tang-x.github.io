@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="馒头的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  <link rel="dns-prefetch" href="https://at.alicdn.com">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>网络API</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+  <canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">馒头的博客</a>
+  <a class="face-img" href="/">
+    <img src="https://i.loli.net/2019/12/28/GwnEfrOQ1H9L4yJ.jpg">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    网络API
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2019-12-30T04:18:09.027Z" itemprop="datePublished">2019-12-30</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2020-01-12T17:25:36.790Z" itemprop="dateUpdated">2020-01-13</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <h2 id="网络API"><a href="#网络API" class="headerlink" title="网络API"></a>网络API</h2><p>网络应用程序，分为前端和后端两个部分。前端都是通过一个url去拿到数据，然后将数据渲染到页面上。当前后拿给前端分离开发的时候，后端很重要的一个工作就是写好各种API接口，将写好的接口提供给前端，然后前端再通过这个接口去获取JSON数据。</p>
+<h4 id="1-什么是API"><a href="#1-什么是API" class="headerlink" title="1.什么是API"></a>1.什么是API</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">API - Application Programming Interface (应用程序编程接口)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>API - 是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节</li>
+<li>API - 先把这些复杂的操作写在一个函数里面，编译成一个组件（一般是动态链接库），随操作系统一起发布，并配上说明文档，程序员只需要简单地调用这些函数就可以完成复杂的工作，让编程变得简单有趣(</li>
+<li>通俗来说，别人写好的代码，或者编译好的程序，提供给你使用，就叫做API</li>
+</ul>
+<h4 id="2-本次主要讲的是网络API-–-RESTful-API"><a href="#2-本次主要讲的是网络API-–-RESTful-API" class="headerlink" title="2.本次主要讲的是网络API – RESTful API"></a>2.本次主要讲的是网络API – RESTful API</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">REST -  Representational State Transfer (表述性转态连接)</span><br></pre></td></tr></table></figure>
+<p>RESTful是一种架构的规范与约束、原则，符合这种规范的架构就是RESTful架构。<br>REST就是通过对资源的表述性状态转移，资源的地址在web中就是URL (统一资源标识符)，围绕资源进行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">新增 - POST、</span><br><span class="line">获取 - GET、</span><br><span class="line">更新 - PUT &#x2F; PATCH、</span><br><span class="line">删除 - DELETE</span><br></pre></td></tr></table></figure>
+<p>以及对符合特定条件的资源进行列表操作(针对资源设计接口)</p>
+<p>在实际的使用过程中要围绕两件事来做：无状态和幂等性</p>
+<p>无状态：是指每次的请求都是独立的，它的执行情况和结果与前面的请求和之后的请求是无直接关系的。</p>
+<p>幂等性：是指不管你调用一次，还是调用一百次，一千次，结果都是相同的。</p>
+<p>在使用之前我们还会使用到一个Django框架的三方库：djangorestframework</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install djangorestframework</span><br></pre></td></tr></table></figure>
+
+<p>安装好这个三方库后，就可以去使用了</p>
+<p>首先创建一个视图</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> rest_framework.decorators <span class="keyword">import</span> api_view</span><br><span class="line"><span class="keyword">from</span> rest_framework.response <span class="keyword">import</span> Response</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@api_view(('GET', ))     # 这是djangorestframework里面的装饰器，可以通过这个装饰器去限制只能使用那些请求方法（这里只能用GET方法,请求错误就报错）</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_provinces</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="string">"""获取省级行政区域"""</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 查询数据</span></span><br><span class="line">    queryset = District.objects\</span><br><span class="line">        .filter(pid__isnull=<span class="literal">True</span>).only(<span class="string">'distid'</span>, <span class="string">'name'</span>)</span><br><span class="line">        <span class="comment"># only是指只查询括号里面的字段</span></span><br><span class="line">        <span class="comment">#序列化数据（通过自定义序列化器）</span></span><br><span class="line">    serializer = DistrictSimpleSerializer(queryset, many=<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">return</span> Response(serializer.data) <span class="comment"># 通过Response返回JSON数据</span></span><br></pre></td></tr></table></figure>
+
+<p>在序列化数据之前需要创建一个叫”serializers.py”的py文件,这个是djangorestframework这三方库提供的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> rest_framework <span class="keyword">import</span> serializers</span><br><span class="line"><span class="keyword">from</span> common.models <span class="keyword">import</span> District</span><br><span class="line"></span><br><span class="line"><span class="comment"># 自定义序列化器</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DistrictSimpleSerializer</span><span class="params">(serializers.ModelSerializer)</span>:</span> <span class="comment"># 直接对应模型</span></span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        model = District</span><br><span class="line">        fields = (<span class="string">'distid'</span>, <span class="string">'name'</span>) <span class="comment"># 获取指定字段</span></span><br></pre></td></tr></table></figure>
+
+<p>完成以上的内容后，在应用的url里面配置路径</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> common.views <span class="keyword">import</span> get_provinces</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">	path(<span class="string">'provinces/'</span>, get_provinces),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>同时也要在全局的url里面配置才能使用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path, include</span><br><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">'admin/'</span>, admin.site.urls),</span><br><span class="line">    path(<span class="string">'api/'</span>, include(<span class="string">'common.urls'</span>)), <span class="comment"># include把common应用的url包含了</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>这样我们就可以在全局配置的url下通过api/provinces/去访问页面了，当然在全局里面的admin是可以直接/admin去访问的。</p>
+
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a href="https://hexo.io" target="_blank" rel="noopener"> Hexo </a> 强力驱动 |
+      <a href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2017-2020 馒头的博客 京ICP备000000号</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观小猿大圣的博客(づ｡◕‿‿◕｡)づ！\n,\n本博客使用 %cHexo%c 搭建，博客主题为小猿大圣开发的 %chexo-themes-yearn%c ~~~ 🎉🎉🎉 \n\n源码 https://github.com/Youthink/hexo-themes-yearn \n\n如果喜欢可以 star 支持一下 ❤️~\n,\n扫描下面的二维码，在手机上查看博客！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png,\n 想知道这个效果如何实现的？博客内搜索 console 彩蛋 🚀 ！\n'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.js"></script>
+
+  <script src="//at.alicdn.com/t/font_159214_mvtxvg9me9.js"></script>
+<script type="text/javascript" src="/js/src/click_love.js"></script>
+<script type="text/javascript" src="/js/src/click_magic.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
